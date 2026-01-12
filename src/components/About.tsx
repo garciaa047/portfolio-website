@@ -25,7 +25,7 @@ const About = () => {
             </p>
             <div className="pt-4">
               <a
-                href="portfolio-website/resume.pdf"
+                href="/resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-primary hover:opacity-80 transition-opacity font-medium"
