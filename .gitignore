@@ -12,6 +12,10 @@ lerna-debug.log*
 tmpclaude*
 temporary
 node_modules
+*.npz
+*.npy
+*.pkl
+convert_model.py
 dist
 dist-ssr
 *.local
