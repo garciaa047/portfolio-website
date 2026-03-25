@@ -2,6 +2,10 @@
 
 A personal portfolio website built to showcase my projects, skills, and experience as a Computer Science student at TMU.
 
+'''
+https://garciaa047.github.io/portfolio-website/
+'''
+
 ## Tech Stack
 
 - **React** - UI framework
