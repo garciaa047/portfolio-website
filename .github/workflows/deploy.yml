@@ -1,0 +1,56 @@
+# Builds the site and publishes it to GitHub Pages.
+#
+# One-time setup in the repo: Settings → Pages → Source = "GitHub Actions".
+# vite.config.ts uses base "./", so this works whether the site lands at
+# garciaa047.github.io/ or garciaa047.github.io/<repo>/. Nothing here needs
+# to know the repo name.
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+# Allow the workflow to publish Pages, and let it read the repo.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time; don't cancel a run that is mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      # `npm ci` builds from package-lock.json exactly, so CI can't drift
+      # from what was tested locally.
+      - run: npm ci
+      # `npm run build` is `tsc -b && vite build`: a type error fails the
+      # deploy rather than shipping a broken bundle.
+      - run: npm run build
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

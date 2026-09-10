@@ -1,0 +1,90 @@
+/* Colors: fully monochrome. A graded scale of warm greys used like
+   pencil pressure. No hue accents, ever. Light theme on :root, warm
+   charcoal under [data-theme="dark"]. */
+:root {
+  /* Paper: warm off-white surfaces (light end of the mono scale) */
+  --paper-0: #faf8f2;
+  --paper-50: #f4f1ea;
+  --paper-100: #ece7db;
+  --paper-200: #ddd7c8;
+
+  /* Ink: warm grey to near-black (the dark end) */
+  --ink-100: #c5c0b4;
+  --ink-200: #a39e90;
+  --ink-300: #807b6e;
+  --ink-400: #5f5b50;
+  --ink-500: #444039;
+  --ink-700: #2a2823;
+  --ink-900: #1b1a16;
+
+  /* Graphite: translucent ink for hairlines, shading, field tints */
+  --graphite-02: rgba(27, 26, 22, 0.025);
+  --graphite-04: rgba(27, 26, 22, 0.05);
+  --graphite-08: rgba(27, 26, 22, 0.09);
+  --graphite-14: rgba(27, 26, 22, 0.14);
+  --graphite-24: rgba(27, 26, 22, 0.24);
+
+  /* Semantic: surfaces */
+  --surface-page: var(--paper-50);
+  --surface-raised: var(--paper-0);
+  --surface-sunken: var(--paper-100);
+  --surface-inverse: var(--ink-900);
+
+  /* Semantic: text */
+  --text-strong: var(--ink-900);
+  --text-body: var(--ink-700);
+  --text-soft: var(--ink-500);
+  --text-muted: var(--ink-300);
+  --text-faint: var(--ink-200);
+  --text-on-inverse: var(--paper-50);
+
+  /* Semantic: lines & accent */
+  --line-hair: var(--graphite-14);
+  --line-soft: var(--graphite-08);
+  --line-strong: var(--ink-900);
+  --accent: var(--ink-900);
+  --accent-on: var(--paper-50);
+  --field-shade: var(--graphite-04);
+
+  /* Annotation, the one permitted hue: a professor's red pen.
+     Used only for marginalia: footnote marks, margin notes, the
+     reading rule, active states. Never for surfaces or body text. */
+  --annotation: #8a2e1f;
+  --annotation-strong: #6f2417;
+  --annotation-soft: rgba(138, 46, 31, 0.38);
+  --annotation-faint: rgba(138, 46, 31, 0.08);
+}
+
+[data-theme="dark"] {
+  /* Warm charcoal: the same scale inverted */
+  --surface-page: #1a1813;
+  --surface-raised: #242118;
+  --surface-sunken: #131109;
+  --surface-inverse: #f1ece0;
+
+  --text-strong: #f3eee2;
+  --text-body: #d8d2c4;
+  --text-soft: #aaa491;
+  --text-muted: #837d6e;
+  --text-faint: #5d584c;
+  --text-on-inverse: #1a1813;
+
+  --line-hair: rgba(243, 238, 226, 0.16);
+  --line-soft: rgba(243, 238, 226, 0.08);
+  --line-strong: #f3eee2;
+  --accent: #f3eee2;
+  --accent-on: #1a1813;
+  --field-shade: rgba(243, 238, 226, 0.05);
+
+  --graphite-02: rgba(243, 238, 226, 0.03);
+  --graphite-04: rgba(243, 238, 226, 0.05);
+  --graphite-08: rgba(243, 238, 226, 0.09);
+  --graphite-14: rgba(243, 238, 226, 0.15);
+  --graphite-24: rgba(243, 238, 226, 0.26);
+
+  /* Red ink reads warmer on dark paper */
+  --annotation: #d68a6c;
+  --annotation-strong: #e29e82;
+  --annotation-soft: rgba(214, 138, 108, 0.42);
+  --annotation-faint: rgba(214, 138, 108, 0.09);
+}

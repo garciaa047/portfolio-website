@@ -1,0 +1,39 @@
+/* Typography: EB Garamond serif for everything you read; Space Mono for
+   everything you label (uppercase + tracked). Sentence case in prose. */
+:root {
+  --font-serif: "EB Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-mono: "Space Mono", ui-monospace, "SF Mono", "Roboto Mono", monospace;
+
+  /* Serif ramp, 5xl -> xs */
+  --text-5xl: 5rem;
+  --text-4xl: 3.5rem;
+  --text-3xl: 2.5rem;
+  --text-2xl: 1.875rem;
+  --text-xl: 1.375rem;
+  --text-lg: 1.1875rem;
+  --text-base: 1.0625rem;
+  --text-sm: 0.9375rem;
+  --text-xs: 0.8125rem;
+
+  /* Mono label sizes */
+  --label-base: 0.8125rem;
+  --label-sm: 0.6875rem;
+
+  /* Leading */
+  --leading-tight: 1.08;
+  --leading-snug: 1.25;
+  --leading-normal: 1.45;
+  --leading-relaxed: 1.65;
+
+  /* Tracking */
+  --tracking-display: -0.015em;
+  --tracking-normal: 0;
+  --tracking-mono: 0.02em;
+  --tracking-label: 0.22em;
+
+  /* Weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+}

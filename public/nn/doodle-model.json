@@ -1,0 +1,17 @@
+{
+  "layerSizes": [
+    900,
+    128,
+    64,
+    5
+  ],
+  "classNames": [
+    "airplane",
+    "apple",
+    "clock",
+    "pants",
+    "tree"
+  ],
+  "leakyAlpha": 0.1,
+  "params": 123909
+}

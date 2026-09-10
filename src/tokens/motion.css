@@ -1,0 +1,33 @@
+/* Motion: calm & precise; ruler-straight easing, no bounce.
+   Hover = opacity/shade + small slide; press = 0.5px nudge.
+   Durations resolve to 0ms when prefers-reduced-motion is set. */
+:root {
+  --ease-precise: cubic-bezier(0.2, 0, 0, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-linear: linear;
+
+  --dur-instant: 80ms;
+  --dur-fast: 140ms;
+  --dur-base: 220ms;
+  --dur-slow: 420ms;
+  --dur-reveal: 700ms;
+  --dur-rule: 1100ms;
+  --dur-globe: 24s;
+
+  --t-colors: color var(--dur-fast) var(--ease-precise),
+    background-color var(--dur-fast) var(--ease-precise),
+    border-color var(--dur-fast) var(--ease-precise);
+  --t-transform: transform var(--dur-base) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-instant: 0ms;
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+    --dur-reveal: 0ms;
+    --dur-rule: 0ms;
+  }
+}

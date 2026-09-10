@@ -1,0 +1,47 @@
+/* Effects: near-square corners, hairline rules, quiet shadows.
+   Paper, not cards-with-coloured-borders. */
+:root {
+  /* Radii: near-square */
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 999px;
+
+  /* Borders: hairline rules do the work */
+  --border-hair: 1px solid var(--line-hair);
+  --border-soft: 1px solid var(--line-soft);
+  --border-strong: 1.5px solid var(--line-strong);
+  --border-w: 1px;
+
+  /* Shadows: a sheet lifting off a desk */
+  --shadow-none: none;
+  --shadow-sm: 0 1px 1px rgba(27, 26, 22, 0.04);
+  --shadow-paper: 0 1px 2px rgba(27, 26, 22, 0.05),
+    0 10px 28px -16px rgba(27, 26, 22, 0.18);
+  --shadow-lift: 0 2px 4px rgba(27, 26, 22, 0.06),
+    0 22px 48px -22px rgba(27, 26, 22, 0.26);
+  --shadow-inset: inset 0 1px 2px rgba(27, 26, 22, 0.06);
+
+  /* Focus ring */
+  --ring: 0 0 0 2px var(--surface-page), 0 0 0 3.5px var(--ink-900);
+
+  /* Pencil crosshatch */
+  --hatch: repeating-linear-gradient(
+    45deg,
+    var(--graphite-08) 0,
+    var(--graphite-08) 0.5px,
+    transparent 0.5px,
+    transparent 5px
+  );
+}
+
+[data-theme="dark"] {
+  --shadow-sm: 0 1px 1px rgba(0, 0, 0, 0.4);
+  --shadow-paper: 0 1px 2px rgba(0, 0, 0, 0.5),
+    0 12px 30px -16px rgba(0, 0, 0, 0.7);
+  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.5),
+    0 24px 50px -22px rgba(0, 0, 0, 0.8);
+  --shadow-inset: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+  --ring: 0 0 0 2px var(--surface-page), 0 0 0 3.5px #f3eee2;
+}

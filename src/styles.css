@@ -1,0 +1,12 @@
+/* styles.css: the single global stylesheet entry point.
+   Imports only: link this one file and you inherit every token,
+   the fonts, and the paper/ink base. Order matters: fonts and
+   primitives first, then semantics, then base that consumes them. */
+@import "./tokens/fonts.css";
+@import "./tokens/colors.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/effects.css";
+@import "./tokens/texture.css";
+@import "./tokens/motion.css";
+@import "./tokens/base.css";
