@@ -190,6 +190,13 @@ export interface ExperienceItem {
 
 export const experience: ExperienceItem[] = [
   {
+    period: "Jan 2027 to Apr 2027",
+    role: "Machine Learning Software Engineer",
+    org: "RBC Borealis",
+    detail:
+      "Incoming. Joining the Knowledge AI team behind RBC's firm-wide NLP assistant for internal policy questions.",
+  },
+  {
     period: "May 2026 to Dec 2026",
     role: "Software Developer",
     org: "Royal Bank of Canada (RBC)",
@@ -199,10 +206,10 @@ export const experience: ExperienceItem[] = [
   },
   {
     period: "May 2025 to Aug 2025",
-    role: "Project Coordinator",
+    role: "Software Engineer",
     org: "Bimen Business Consultants",
     detail:
-      "Built a PowerShell script that sorts and files 500+ legal documents a day, with email notifications and error reporting. Also ran QA on a client software rollout and helped migrate their infrastructure during an ownership transition.",
+      "Helped build a React and Node.js warehouse management tool that lets a client accept, provision, and adjust stock against incoming orders, replacing a slow, error-prone Excel workflow. Also automated the filing of 500+ legal documents a day with PowerShell scripts and error alerts, saving 30 minutes a day.",
   },
   {
     period: "Oct 2022 to Apr 2023",
